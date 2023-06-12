@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid"><a href="">
+        <img src="../../../assets/pictures/logo.png"  alt="Logo" style="height: 40px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about-me">About me</a>
+              </li>
+             
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="tutorials">Tutorials</a>
+          </li>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Applications
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="calculator">Calculator</a></li>
+              <li><a class="dropdown-item" href="weather">Weather</a></li>
+              <li><a class="dropdown-item" href="jokes">Jokes</a></li>
+            </ul>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12" style="text-align: center;"><h1>Jokes App</h1><br>
+        
+        <button type="button" class="btn btn-success button-design jokey"
+         (click)="jokes()">Generate Jokes</button>
+         
+         <br><br>
+         
+         <p>{{jokeText}}</p>
+    
+    
+    </div></div>
+    <div>

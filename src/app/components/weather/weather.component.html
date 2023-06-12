@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid"><a href="">
+        <img src="../../../assets/pictures/logo.png"  alt="Logo" style="height: 40px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about-me">About me</a>
+              </li>
+             
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="tutorials">Tutorials</a>
+          </li>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Applications
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="calculator">Calculator</a></li>
+              <li><a class="dropdown-item" href="weather">Weather</a></li>
+              <li><a class="dropdown-item" href="jokes">Jokes</a></li>
+            </ul>
+            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="row">
+    
+    
+    <div class="col-12" style="text-align: center;"><h1>Weather App</h1><br>
+        <form [formGroup]="cityForm" >
+        <input class="form-control form-control-lg" type="text" 
+        placeholder="Write you're city here" aria-label=".form-control-lg example" formControlName="cityName">
+    
+        <button type="button" class="btn btn-success button-design" (click)="getCity()">Send</button>
+    
+    
+          </form>
+    
+    
+    <br>
+          <div *ngIf="weatherData">
+            <h2>Weather for {{ weatherData.name }}</h2>
+            <p>Temperature: {{ weatherData.main.temp }}</p>
+            <p>Humidity: {{ weatherData.main.humidity }}</p>
+            <p>Weather: {{ weatherData.weather[0].main }}</p>
+            <p>description {{ weatherData.weather[0].description }}</p>
+            <p>wind speed: {{ weatherData.wind.speed }}</p>
+            <p>sunrise: {{ weatherData.sys.sunrise | date :'shortTime' }}</p>
+            <p>sunset: {{ weatherData.sys.sunset | date :'shortTime' }}</p>
+          </div>
+           
+    
+    
+    </div>
+
+
+
+
+
